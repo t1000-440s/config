@@ -1,0 +1,52 @@
+# git aliases
+alias gith="git hist"
+
+# navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# ls
+alias ll='ls -lahtF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# df
+alias df='df -HT'
+alias du='du -hd 1 --time'
+
+# rm
+alias rm='rm -i'
+alias rmf='rm -f'
+alias rmr='rm -R'
+alias rmrf='rm -Rf'
+
+# file manipulation
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+# pacman
+alias pi='sudo pacman -Syu'
+alias pu='sudo pacman -Rns'
+
+# others
+alias h='history'
+alias ha='history | grep'
+alias c='clear'
+
+alias path='echo -e ${PATH//:/\\n}'
+
+alias vi='vim'

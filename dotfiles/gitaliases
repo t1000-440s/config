@@ -1,0 +1,28 @@
+[alias]
+      aa = add --all
+      ao = add --patch
+      b = branch
+      br = branch
+      ca = commit --amend
+      co = checkout
+      ci = commit
+      cp = cherry-pick
+      d = diff
+      dc = diff --cached
+      fo = fetch origin
+      fop = fetch origin --prune
+      fp = format-patch
+      l = "!. ~/.githelpers && pretty_git_log"
+      lf = log --pretty=format:\"%h %cd%C(yellow)%d%Creset %s%C(green) [%an]%Creset\" --decorate --numstat --date=short
+      rb = "!r() { git rebase -i HEAD~$1; }; r"
+      rc = rebase --continue
+      ra = rebase --abort
+      rs = rebase --skip
+      s = status -s
+      st = status
+      sl = stash list
+      sp = stash pop
+      type = cat-file -t
+      dump = cat-file -p
+      qclone = clone --depth 1
+
