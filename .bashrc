@@ -75,73 +75,18 @@ unset color_prompt force_color_prompt
 #    ;;
 #esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-#--------------------------------------------------------
-# some more ls aliases
-#--------------------------------------------------------
-
-alias ll='ls -lahtF'
-alias la='ls -A'
-alias l='ls -aF'
-
-#--------------------------------------------------------
-# t100 custom bonanzas
-#-------------------------------------------------------
-alias df='df -HT'
-alias du='du -hd 1 --time'
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias mkdir='mkdir -p'
-
-alias h='history'
-alias ha='history | grep'
-alias c='clear'
-alias ..='cd ..'
-
-alias path='echo -e ${PATH//:/\\n}'
-
-alias vi='vim'
-
-#--------------------------------------------------------
 # Misc.
-#--------------------------------------------------------
-
 function firefox() { command firefox "$@" & }
 
-
-#--------------------------------------------------------
 # File and search functions
-#--------------------------------------------------------
-
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
 
-
-#--------------------------------------------------------
 # Process/system type functions
-#--------------------------------------------------------
-
 #function my_ip() # Get IP adresses.
 #{
 #    MY_IP=$(ifconfig wlp3s0 | grep "\inet\>" | awk '{print $2}')
 #	echo $MY_IP
 #}
-
-
 
 #function ii()   # Get current host related info.
 #{
@@ -156,8 +101,6 @@ function ff() { find . -type f -iname '*'$*'*' -ls ; }
 #    echo -e "\n${RED}Open connections :$NC "; netstat -pan --inet;
   #  echo
 #}
-
-
 
 function killps()                 # Kill by process name.
 {
